@@ -1,3 +1,6 @@
+/**
+ * Represents a Book entity with encapsulated properties.
+ */
 public class Book {
     private int id;
     private String title;
@@ -5,7 +8,6 @@ public class Book {
     private String isbn;
     private int publicationYear;
 
-    // Constructor
     public Book(int id, String title, String author, String isbn, int publicationYear) {
         this.id = id;
         this.title = title;
@@ -14,29 +16,17 @@ public class Book {
         this.publicationYear = publicationYear;
     }
 
-    // Getters and Setters
     public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
-
     public String getAuthor() { return author; }
     public void setAuthor(String author) { this.author = author; }
-
     public String getIsbn() { return isbn; }
-    public void setIsbn(String isbn) { this.isbn = isbn; }
-
     public int getPublicationYear() { return publicationYear; }
-    public void setPublicationYear(int publicationYear) { this.publicationYear = publicationYear; }
 
     @Override
     public String toString() {
-        return "Book ID: " + id + 
-        
-               " | Title: " + title + 
-               " | Author: " + author + 
-               " | ISBN: " + isbn + 
-               " | Year: " + publicationYear;
+        return String.format("ID: %d | Title: %s | Author: %s | ISBN: %s | Year: %d", 
+                id, title, author, isbn, publicationYear);
     }
 }
